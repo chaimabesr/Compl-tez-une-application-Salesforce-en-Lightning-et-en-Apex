@@ -1,3 +1,29 @@
 /**
  * Created by William on 13/03/2024.
+<<<<<<< HEAD
  */
+=======
+ */
+ .container {
+    padding: 0; /* Supprime tout padding du conteneur */
+}
+
+.datatable {
+    border: none; /* Ajoute une bordure autour du tableau */
+    margin-bottom: 3rem; /* Ajoute de l'espace entre le tableau et le bouton */
+    width: 100%; /* S'assure que le tableau occupe toute la largeur du conteneur */
+    
+}
+
+.datatable th,
+.datatable td {
+    border: 3px solid #ddd; ; /* Ajoute des bordures fines aux cellules du tableau */
+    padding: 8px; /* Ajoute un peu de padding pour espacer le texte des bordures */
+    text-align: left; /* Aligne le texte à gauche dans les cellules */
+}
+
+.refresh-button {
+    margin-top: 1rem; /* Ajoute un espace approprié au-dessus du bouton */
+    
+}
+>>>>>>> Projet 3 Chaima Gharbi

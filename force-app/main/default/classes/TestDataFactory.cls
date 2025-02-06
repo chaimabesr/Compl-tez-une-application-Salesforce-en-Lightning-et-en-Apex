@@ -17,4 +17,18 @@ public class TestDataFactory {
         insert opp;
         return opp;
     }
+<<<<<<< HEAD
+=======
+        public static Case  createTestCase(Id accountId, String subject) {
+        Case testCase = new Case(
+                AccountId=accountId,
+                Subject=subject,
+                Status= 'New',
+                Priority= 'High',
+                Origin= 'Email'
+        );
+        insert testCase;
+        return testCase; 
+    }
+>>>>>>> Projet 3 Chaima Gharbi
 }

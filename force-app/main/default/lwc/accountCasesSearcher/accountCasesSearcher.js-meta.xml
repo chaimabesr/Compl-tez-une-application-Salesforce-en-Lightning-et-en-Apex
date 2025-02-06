@@ -6,5 +6,10 @@
     <masterLabel>Account Cases Searcher</masterLabel>
     <targets>
         <target>lightning__RecordPage</target>
+<<<<<<< HEAD
+=======
+        <target>lightning__AppPage</target>
+        <target>lightning__HomePage</target>
+>>>>>>> Projet 3 Chaima Gharbi
     </targets>
 </LightningComponentBundle>
