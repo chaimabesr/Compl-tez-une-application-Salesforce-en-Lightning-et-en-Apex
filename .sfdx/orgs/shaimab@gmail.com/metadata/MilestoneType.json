@@ -1,0 +1,41 @@
+{
+  "status": 0,
+  "result": [
+    {
+      "createdById": "005WU000008XZaJYAW",
+      "createdByName": "Automated Process",
+      "createdDate": "2024-12-05T10:19:13.000Z",
+      "fileName": "milestoneTypes/Escalader la requête.milestoneType",
+      "fullName": "Escalader la requête",
+      "id": "557WU000009XyGPYA0",
+      "lastModifiedById": "005WU000008XZaJYAW",
+      "lastModifiedByName": "Automated Process",
+      "lastModifiedDate": "2024-12-05T10:19:13.000Z",
+      "type": "MilestoneType"
+    },
+    {
+      "createdById": "005WU000008XZaJYAW",
+      "createdByName": "Automated Process",
+      "createdDate": "2024-12-05T10:19:13.000Z",
+      "fileName": "milestoneTypes/Première réponse au client.milestoneType",
+      "fullName": "Première réponse au client",
+      "id": "557WU000009XyGOYA0",
+      "lastModifiedById": "005WU000008XZaJYAW",
+      "lastModifiedByName": "Automated Process",
+      "lastModifiedDate": "2024-12-05T10:19:13.000Z",
+      "type": "MilestoneType"
+    },
+    {
+      "createdById": "005WU000008XZaJYAW",
+      "createdByName": "Automated Process",
+      "createdDate": "2024-12-05T10:19:13.000Z",
+      "fileName": "milestoneTypes/Fermer la requête.milestoneType",
+      "fullName": "Fermer la requête",
+      "id": "557WU000009XyGQYA0",
+      "lastModifiedById": "005WU000008XZaJYAW",
+      "lastModifiedByName": "Automated Process",
+      "lastModifiedDate": "2024-12-05T10:19:13.000Z",
+      "type": "MilestoneType"
+    }
+  ]
+}
