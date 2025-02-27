@@ -1,3 +1,30 @@
 /**
  * Created by William on 13/03/2024.
  */
+.custom-table .slds-table tbody tr td {
+    text-align: center !important;
+}
+.container {
+    padding: 0; /* Supprime tout padding du conteneur */
+}
+
+.datatable {
+    border: none; /* Supprime la bordure autour du tableau */
+    margin-bottom: 4rem; /* Ajoute de l'espace entre le tableau et le bouton */
+    width: 100%; /* S'assure que le tableau occupe toute la largeur du conteneur */
+
+}
+
+.datatable th,
+.datatable td {
+    border: 3px solid #ddd;
+    padding: 8px;
+    text-align: center !important; /* Force le centrage */
+    vertical-align: middle; /* Centre verticalement */
+}
+.refresh-button {
+    display: block; /* Permet au bouton d'occuper toute la largeur */
+    margin-top: 2rem; /* Augmente l'espace au-dessus du bouton */
+    margin-left: auto;
+    margin-right: auto; /* Centre le bouton horizontalement */
+}
