@@ -8,6 +8,7 @@ const COLUMNS = [
 ];
 
 export default class AccountCaseSearchComponent extends LightningElement {
+
     @api recordId;
     @track cases;
     @track error;
