@@ -1,53 +1,40 @@
-<<<<<<< HEAD
 import { LightningElement, track, api } from 'lwc';
-import findCasesBySubject from '@salesforce/apex/AccountCasesController.findCasesBySubject';
-=======
-import { LightningElement, track, api, wire } from 'lwc';
 import findCasesBySubject from '@salesforce/apex/AccountCasesController.getCases';
-import Subject from '@salesforce/schema/Case.Subject';
->>>>>>> Projet 3 Chaima Gharbi
 
 const COLUMNS = [
-    { label: 'Sujet', fieldName: 'Subject', type: 'text' },
-    { label: 'Statut', fieldName: 'Status', type: 'text' },
-    { label: 'Priorité', fieldName: 'Priority', type: 'text' },
+  { label: 'Sujet', fieldName: 'Subject', type: 'text' },
+  { label: 'Statut', fieldName: 'Status', type: 'text' },
+  { label: 'Priorité', fieldName: 'Priority', type: 'text' },
 ];
 
 export default class AccountCaseSearchComponent extends LightningElement {
-    @api recordId;
-    @track cases;
-    @track error;
-    searchTerm = '';
-    columns = COLUMNS;
+  @api recordId;
+  @track cases;
+  @track error;
+  @track errorMessage = ''; // Ajout de cette variable
+  searchTerm = '';
+  columns = COLUMNS;
 
-    updateSearchTerm(event) {
-<<<<<<< HEAD
-        this.searchTerm = event.target.value;
-    }
+  updateSearchTerm(event) {
+    this.searchTerm = event.target.value;
+  }
 
-    handleSearch() {
-        findCasesBySubject({ accountId: this.recordId, subjectSearchTerm: this.searchTerm })
-            .then(result => {
-                this.cases = result;
-                this.error = undefined;
-            })
-            .catch(error => {
-=======
-        this.searchTerm= event.target.value;
-    }
-
-    handleSearch() {
-        console.log('bouton appuyé');
-        findCasesBySubject({ accountId: this.recordId, subject: this.searchTerm })
-            .then(result => {
-                this.cases = result;
-                this.error = undefined;
-                console.log(this.cases);
-            })
-            .catch(error => {
-                console.log(error);
->>>>>>> Projet 3 Chaima Gharbi
-                this.error = 'Une erreur est survenue lors de la recherche des cases.';
-            });
-    }
+  handleSearch() {
+    findCasesBySubject({ accountId: this.recordId, subjectSearchTerm: this.searchTerm })
+      .then(result => {
+        if (result && result.length > 0) {
+          this.cases = result;
+          this.errorMessage = ''; // Réinitialiser le message d'erreur
+        } else {
+          this.cases = [];
+          this.errorMessage = 'Aucun cas trouvé pour ce compte.';
+        }
+        this.error = '';
+      })
+      .catch(error => {
+        this.cases = [];
+        this.error = 'Une erreur est survenue lors de la recherche des cas.';
+        this.errorMessage = '';
+      });
+  }
 }
