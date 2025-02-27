@@ -11,12 +11,22 @@
                               class="slds-m-top_small">
             </lightning-button>
         </div>
+
+        <!-- Affichage du tableau si des cases existent -->
         <template if:true={cases}>
-            <lightning-datatable data={cases}
-                                 columns={columns}
-                                 key-field="Id">
-            </lightning-datatable>
+            <template if:true={cases.length}>
+                <lightning-datatable data={cases}
+                                     columns={columns}
+                                     key-field="Id">
+                </lightning-datatable>
+            </template>
+            <!-- Affichage d'un message si aucun cas n'est trouvé -->
+            <template if:false={cases.length}>
+                <p class="slds-p-around_medium slds-text-color_error">Aucun cas trouvé pour ce compte.</p>
+            </template>
         </template>
+
+        <!-- Affichage des erreurs -->
         <template if:true={error}>
             <p class="slds-p-around_medium slds-text-color_error">{error}</p>
         </template>

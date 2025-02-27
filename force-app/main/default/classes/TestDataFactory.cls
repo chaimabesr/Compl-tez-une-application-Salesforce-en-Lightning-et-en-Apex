@@ -17,8 +17,6 @@ public class TestDataFactory {
         insert opp;
         return opp;
     }
-<<<<<<< HEAD
-=======
         public static Case  createTestCase(Id accountId, String subject) {
         Case testCase = new Case(
                 AccountId=accountId,
@@ -30,5 +28,5 @@ public class TestDataFactory {
         insert testCase;
         return testCase; 
     }
->>>>>>> Projet 3 Chaima Gharbi
+
 }
